@@ -237,6 +237,83 @@ footer{border-top:1px solid var(--border);padding:26px 48px;
 .fl2 a{font-family:var(--mono);font-size:12px;color:var(--text-faint);text-decoration:none;transition:color .2s}
 .fl2 a:hover{color:var(--green)}
 
+
+/* PROJECTS */
+#projects{padding:96px 48px;max-width:1100px;margin:0 auto}
+.projects-intro{font-family:var(--mono);font-size:13px;color:var(--text-dim);margin-bottom:20px;
+  background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:14px 20px}
+.projects-intro span{color:var(--green)}
+
+/* GITHUB PROFILE BANNER */
+.gh-profile-banner{display:flex;align-items:center;gap:24px;flex-wrap:wrap;justify-content:space-between;
+  background:var(--bg3);border:1px solid var(--border);border-radius:12px;
+  padding:20px 24px;margin-bottom:20px;position:relative;overflow:hidden}
+.gh-profile-banner::before{content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(0,255,136,.03),transparent 60%);pointer-events:none}
+.gh-profile-left{display:flex;align-items:center;gap:14px}
+.gh-avatar-wrap{position:relative;width:48px;height:48px;flex-shrink:0}
+.gh-avatar-wrap img{width:48px;height:48px;border-radius:50%;border:2px solid rgba(0,255,136,.3);object-fit:cover}
+.gh-avatar-fallback{width:48px;height:48px;border-radius:50%;background:var(--green-glow);
+  border:2px solid rgba(0,255,136,.3);display:flex;align-items:center;justify-content:center;
+  font-family:var(--mono);font-size:14px;font-weight:700;color:var(--green);display:none}
+.gh-profile-name{font-family:var(--mono);font-size:15px;font-weight:700;color:var(--text);margin-bottom:3px}
+.gh-profile-sub{font-family:var(--mono);font-size:11px;color:var(--text-faint)}
+.gh-profile-stats{display:flex;gap:28px;flex-wrap:wrap}
+.gh-profile-stat{display:flex;flex-direction:column;align-items:center;gap:2px}
+.gh-profile-n{font-family:var(--mono);font-size:20px;font-weight:700;color:var(--green);line-height:1}
+.gh-profile-l{font-family:var(--mono);font-size:10px;color:var(--text-faint);letter-spacing:.05em}
+.gh-profile-cta{font-family:var(--mono);font-size:12px;color:var(--green);
+  border:1px solid rgba(0,255,136,.3);border-radius:7px;padding:8px 16px;
+  text-decoration:none;transition:all .2s;white-space:nowrap}
+.gh-profile-cta:hover{background:var(--green-glow);box-shadow:0 0 16px rgba(0,255,136,.15)}
+
+/* GITHUB CARDS */
+.gh-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:18px;margin-bottom:10px}
+.gh-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:22px;
+  position:relative;overflow:hidden;transition:all .3s;cursor:pointer;text-decoration:none;display:block;color:inherit}
+.gh-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(to right,var(--green),var(--cyan));opacity:0;transition:opacity .3s}
+.gh-card:hover{border-color:rgba(0,255,136,.3);transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.4)}
+.gh-card:hover::before{opacity:1}
+.gh-card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:10px}
+.gh-card-name{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--cyan);
+  display:flex;align-items:center;gap:7px}
+.gh-card-lang{font-family:var(--mono);font-size:10px;color:var(--text-faint);
+  background:var(--bg3);border:1px solid var(--border);padding:3px 8px;border-radius:4px;white-space:nowrap}
+.gh-card-desc{font-size:13px;color:var(--text-dim);line-height:1.65;margin-bottom:14px;min-height:38px}
+.gh-card-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:16px}
+.gh-card-tag{font-family:var(--mono);font-size:10px;background:rgba(0,255,136,.06);
+  border:1px solid rgba(0,255,136,.15);color:var(--green);padding:3px 8px;border-radius:4px}
+.gh-card-stats{display:flex;gap:14px;align-items:center;border-top:1px solid var(--border);padding-top:12px}
+.gh-stat{display:flex;align-items:center;gap:5px;font-family:var(--mono);font-size:11px;color:var(--text-faint)}
+.gh-lang-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ARCHITECTURE */
+.arch-wrap{background:var(--bg2);border:1px solid var(--border);border-radius:16px;overflow:hidden}
+.arch-toolbar{background:var(--bg3);border-bottom:1px solid var(--border);
+  padding:12px 20px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.arch-toolbar-title{font-family:var(--mono);font-size:12px;color:var(--text-dim);margin-right:auto}
+.arch-toolbar-title span{color:var(--green)}
+.arch-btn{font-family:var(--mono);font-size:11px;background:var(--bg2);border:1px solid var(--border);
+  color:var(--text-dim);padding:5px 12px;border-radius:5px;cursor:pointer;transition:all .2s}
+.arch-btn:hover,.arch-btn.arch-active{border-color:var(--green);color:var(--green);background:var(--green-glow)}
+.arch-legend{display:flex;gap:12px;flex-wrap:wrap}
+.arch-legend-item{display:flex;align-items:center;gap:5px;font-family:var(--mono);font-size:10px;color:var(--text-faint)}
+.arch-legend-dot{width:8px;height:8px;border-radius:2px}
+.arch-canvas{position:relative;width:100%;background:var(--bg)}
+.arch-canvas svg{display:block;width:100%}
+.arch-tooltip{position:absolute;background:var(--bg3);border:1px solid var(--border2);
+  border-radius:8px;padding:12px 16px;font-family:var(--mono);font-size:11px;
+  color:var(--text);pointer-events:none;z-index:10;min-width:180px;max-width:240px;
+  box-shadow:0 8px 24px rgba(0,0,0,.5);transition:opacity .15s}
+.arch-tooltip-title{color:var(--green);font-size:12px;font-weight:700;margin-bottom:6px}
+.arch-tooltip-row{color:var(--text-dim);line-height:1.8}
+.arch-tooltip-row b{color:var(--cyan)}
+@keyframes dash{to{stroke-dashoffset:-20}}
+
+@media(max-width:768px){#projects{padding:64px 20px}.gh-profile-banner{flex-direction:column;align-items:flex-start}.gh-profile-stats{gap:16px}}
+
 /* REVEAL */
 .reveal{opacity:0;transform:translateY(28px);transition:all .65s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
@@ -269,8 +346,9 @@ footer{border-top:1px solid var(--border);padding:26px 48px;
     <li><a href="#about"><span class="n">01.</span> about</a></li>
     <li><a href="#skills"><span class="n">02.</span> skills</a></li>
     <li><a href="#experience"><span class="n">03.</span> experience</a></li>
-    <li><a href="#photography"><span class="n">04.</span> photography</a></li>
-    <li><a href="#contact"><span class="n">05.</span> contact</a></li>
+    <li><a href="#projects"><span class="n">04.</span> projects</a></li>
+    <li><a href="#photography"><span class="n">05.</span> photography</a></li>
+    <li><a href="#contact"><span class="n">06.</span> contact</a></li>
     <li><a href="https://linkedin.com/in/ritikgupta0" target="_blank" class="nav-hire">--hire-me ↗</a></li>
   </ul>
 </nav>
@@ -299,7 +377,7 @@ footer{border-top:1px solid var(--border);padding:26px 48px;
         <div class="tl d12"><span class="ps">❯</span> <span class="mx"># Loading portfolio...</span></div>
       </div>
     </div>
-    <h1 class="hero-name">Hi, I'm <span class="hl">Ritik.</span><br>Software Developer<br></h1>
+    <h1 class="hero-name">Hi, I'm <span class="hl">Ritik.</span><br>I build systems that<br><span class="hl">scale at 500K+/day.</span></h1>
     <p class="hero-sub">// code by day &nbsp;·&nbsp; capture by night &nbsp;·&nbsp; pune, india <span class="blink"></span></p>
     <div class="hero-ctas">
       <a href="#contact" class="btn-p">▶ &nbsp;get_in_touch()</a>
@@ -320,22 +398,11 @@ footer{border-top:1px solid var(--border);padding:26px 48px;
     <div class="about-left reveal">
       <span class="about-tag">$ whoami --verbose</span>
       <div class="about-bio">
-        <p>I'm <strong>Ritik Gupta</strong>, a Backend Software Developer based in <strong>Pune, Maharashtra, India</strong> with <span class="hl">3.5+ years</span> of professional experience designing and shipping production-grade distributed systems.</p>
-        <p>I currently work at <strong>Hansen Technologies</strong> — a global leader in billing and revenue management software for the communications industry. I joined as an <strong>Associate Software Developer</strong> in August 2022 and was promoted to <strong>Software Developer</strong> in October 2024, reflecting growing ownership across the architecture and infrastructure stack.</p>
-        <p>At Hansen, I work on microservices-based platforms that power real-world telecom billing. My focus areas include building <span class="hlc">Spring Boot microservices</span>, engineering <span class="hlc">Kafka event-driven pipelines</span> that handle 500K+ messages daily, and automating cloud infrastructure across <span class="hlc">AWS and GCP</span> using Kubernetes, Terraform, and Helm.</p>
-        <p>I'm a firm believer that great systems are observable systems — which is why I invest equally in writing clean code and setting up Prometheus, Grafana, and Jaeger to prove it works in production.</p>
-        <p>Outside engineering, I'm a photographer — publishing work on <span class="hla">Unsplash</span> as <span class="hla">@amaterialisticman</span>. I believe the same patience and eye for detail that makes a great photograph makes a great system.</p>
+        <p>Backend Software Developer with <span class="hl">3.5+ years</span> of experience building <span class="hlc">Java/Spring Boot</span> microservices and <span class="hlc">Kafka</span>-based systems. Skilled in designing high-performance APIs, automating CI/CD pipelines, and managing cloud infrastructure on <span class="hlc">AWS</span> and <span class="hlc">GCP</span> using <span class="hlc">Kubernetes, Terraform, and Helm</span>. Known for optimizing system performance reducing latency, accelerating deployments, and maintaining highly reliable production platforms at scale...</p>
+        <p>Outside of code, I capture the stills and publish it on <span class="hla">Unsplash</span> as <span class="hla">@amaterialisticman📷</span>.</p>
       </div>
     </div>
     <div class="about-right">
-      <div class="stats-strip reveal">
-        <div class="stat-mini"><div class="stat-n">3.5+</div><div class="stat-l">Years Exp.</div></div>
-        <div class="stat-mini"><div class="stat-n">22</div><div class="stat-l">Microservices</div></div>
-        <div class="stat-mini"><div class="stat-n">500K</div><div class="stat-l">Kafka msgs/day</div></div>
-        <div class="stat-mini"><div class="stat-n">40%</div><div class="stat-l">Latency Cut</div></div>
-        <div class="stat-mini"><div class="stat-n">70%</div><div class="stat-l">Faster Deploy</div></div>
-        <div class="stat-mini"><div class="stat-n">85%+</div><div class="stat-l">Test Coverage</div></div>
-      </div>
       <div class="exp-card reveal">
         <div class="exp-card-role">Software Developer</div>
         <div class="exp-card-company">$ Hansen Technologies · Pune</div>
@@ -390,8 +457,8 @@ footer{border-top:1px solid var(--border);padding:26px 48px;
       <div class="ti-co">$ Hansen Technologies · Pune, India</div>
       <ul class="ti-bullets">
         <li>Developed and optimized Spring Boot microservices, reducing system latency by <strong>40%</strong> through API and database performance tuning.</li>
-        <li>Automated deployment of <strong>20+ microservices</strong> on K8s (AWS/GCP) using Terraform/Helm, cutting provisioning time by <strong>70%</strong>.</li>
-        <li>Engineered Kafka event-driven pipelines processing <strong>500K+ daily messages</strong>; reduced message lag from 2 hours to &lt;5 minutes.</li>
+        <li>Automated deployment of <strong>microservices</strong> on K8s (AWS/GCP) using Terraform/Helm, cutting provisioning time by <strong>70%</strong>.</li>
+        <li>Worked on Kafka event-driven pipelines processing, reduced message lag from 2 hours to &lt;5 minutes.</li>
         <li>Built CI/CD pipelines with Jenkins and ArgoCD, integrating SonarQube and Trivy; documented service contracts with OpenAPI/Swagger.</li>
         <li>Reduced deployment time from <strong>4 hours to 30 minutes</strong> via GitOps (ArgoCD) and automated rollbacks.</li>
         <li>Implemented DLQ, manual queue reprocessing, and feedback loop for Transaction Layer microservice, improving fault tolerance.</li>
@@ -410,10 +477,79 @@ footer{border-top:1px solid var(--border);padding:26px 48px;
   </div>
 </section>
 
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="sec" style="padding-bottom:0">
+  <div class="sh reveal">
+    <span class="sh-tag">// 04</span>
+    <h2 class="sh-title">projects &amp; architecture</h2>
+    <div class="sh-line"></div>
+  </div>
+
+  <!-- GitHub Profile Banner -->
+  <div class="gh-profile-banner reveal" id="gh-profile">
+    <div class="gh-profile-left">
+      <div class="gh-avatar-wrap">
+        <img id="gh-avatar" src="" alt="GitHub Avatar" onerror="this.style.display='none'">
+        <div class="gh-avatar-fallback" id="gh-avatar-fallback">RG</div>
+      </div>
+      <div>
+        <div class="gh-profile-name" id="gh-profile-name">ritikgupta0</div>
+        <div class="gh-profile-sub">github.com/ritikgupta0</div>
+      </div>
+    </div>
+    <div class="gh-profile-stats">
+      <div class="gh-profile-stat"><span class="gh-profile-n" id="gh-repos">—</span><span class="gh-profile-l">Repos</span></div>
+      <div class="gh-profile-stat"><span class="gh-profile-n" id="gh-stars">—</span><span class="gh-profile-l">Total Stars</span></div>
+      <div class="gh-profile-stat"><span class="gh-profile-n" id="gh-followers">—</span><span class="gh-profile-l">Followers</span></div>
+      <div class="gh-profile-stat"><span class="gh-profile-n" id="gh-following">—</span><span class="gh-profile-l">Following</span></div>
+    </div>
+    <a href="https://github.com/ritikgupta0" target="_blank" class="gh-profile-cta">View Profile ↗</a>
+  </div>
+
+  <div class="projects-intro reveal">
+    <span>$</span> git remote -v &nbsp;·&nbsp; <span>github.com/ritikgupta0</span> &nbsp;·&nbsp; live stats fetched via GitHub API
+  </div>
+
+  <!-- GitHub Cards -->
+  <div class="gh-grid reveal" id="gh-grid">
+    <div style="grid-column:1/-1;font-family:var(--mono);font-size:13px;color:var(--text-faint);padding:10px 0;display:flex;align-items:center;gap:10px">
+      <span style="width:14px;height:14px;border:2px solid var(--border2);border-top-color:var(--green);border-radius:50%;display:inline-block;animation:spin .7s linear infinite"></span>
+      Fetching repositories from GitHub...
+    </div>
+  </div>
+
+  <!-- Architecture Diagram -->
+  <div style="margin-top:56px">
+  <div class="projects-intro reveal" style="margin-bottom:16px">
+    <span>$</span> system_architecture --interactive &nbsp;·&nbsp; <span style="color:var(--text-faint)">hover nodes to explore</span>
+  </div>
+  <div class="arch-wrap reveal">
+    <div class="arch-toolbar">
+      <span class="arch-toolbar-title"><span>$</span>&nbsp;telecom-billing-platform</span>
+      <button class="arch-btn arch-active" onclick="setArch('kafka')">Kafka Pipeline</button>
+      <button class="arch-btn" onclick="setArch('cicd')">CI/CD Flow</button>
+      <button class="arch-btn" onclick="setArch('cloud')">Cloud Infra</button>
+      <div class="arch-legend">
+        <div class="arch-legend-item"><div class="arch-legend-dot" style="background:#00ff88"></div>Service</div>
+        <div class="arch-legend-item"><div class="arch-legend-dot" style="background:#00d4ff"></div>Infra</div>
+        <div class="arch-legend-item"><div class="arch-legend-dot" style="background:#f59e0b"></div>External</div>
+        <div class="arch-legend-item"><div class="arch-legend-dot" style="background:#a78bfa"></div>Storage</div>
+      </div>
+    </div>
+    <div class="arch-canvas" id="arch-canvas">
+      <svg id="arch-svg" viewBox="0 0 960 520" xmlns="http://www.w3.org/2000/svg"></svg>
+      <div class="arch-tooltip" id="arch-tip" style="opacity:0;position:absolute;top:0;left:0"></div>
+    </div>
+  </div>
+  </div>
+  </div>
+</section>
+
 <!-- PHOTOGRAPHY -->
 <section id="photography">
   <div class="sh reveal">
-    <span class="sh-tag" style="color:var(--amber)">// 04</span>
+    <span class="sh-tag" style="color:var(--amber)">// 05</span>
     <h2 class="sh-title">through_the_lens</h2>
     <div class="sh-line"></div>
   </div>
@@ -473,7 +609,7 @@ footer{border-top:1px solid var(--border);padding:26px 48px;
 <div class="sec-full" id="contact">
   <div class="inner">
     <div class="sh reveal">
-      <span class="sh-tag">// 05</span>
+      <span class="sh-tag">// 06</span>
       <h2 class="sh-title">get_in_touch()</h2>
       <div class="sh-line"></div>
     </div>
@@ -568,6 +704,322 @@ document.getElementById('cf').addEventListener('submit', e => {
   document.getElementById('cf').style.display = 'none';
   document.getElementById('fs').style.display = 'block';
 });
+
+
+// ═══════════════════════════════════════
+// GITHUB CARDS
+// ═══════════════════════════════════════
+(async function loadGitHub() {
+  const user = 'ritikgupta0';
+  const grid = document.getElementById('gh-grid');
+
+  // Curated projects with metadata
+  const projects = [
+    {
+      repo: null,
+      name: 'telecom-billing-platform',
+      desc: 'Event-driven microservices platform processing 500K+ Kafka messages/day for telecom billing with DLQ, retries, and fault-tolerance.',
+      lang: 'Java', langColor: '#b07219',
+      tags: ['Spring Boot','Kafka','Kubernetes','AWS EKS'],
+      stars: '—', forks: '—', type: 'work'
+    },
+    {
+      repo: null,
+      name: 'k8s-infra-automation',
+      desc: 'Terraform + Helm automation for provisioning 20+ microservices on AWS EKS & GCP GKE. Reduced provisioning time by 70%.',
+      lang: 'HCL', langColor: '#7b42bc',
+      tags: ['Terraform','Helm','ArgoCD','GitOps'],
+      stars: '—', forks: '—', type: 'work'
+    },
+    {
+      repo: null,
+      name: 'cicd-pipeline-toolkit',
+      desc: 'Reusable Jenkins + GitHub Actions pipelines with SonarQube, Trivy, and JFrog integration. Cuts deploy time from 4hrs → 30min.',
+      lang: 'Groovy', langColor: '#4298b8',
+      tags: ['Jenkins','GitHub Actions','SonarQube','Trivy'],
+      stars: '—', forks: '—', type: 'work'
+    }
+  ];
+
+  function langColor(lang) {
+    const map = {Java:'#b07219',Python:'#3572A5',JavaScript:'#f1e05a',TypeScript:'#2b7489',
+      Go:'#00ADD8',Kotlin:'#F18E33',HCL:'#7b42bc',Groovy:'#4298b8',Shell:'#89e051',YAML:'#cb171e'};
+    return map[lang] || '#768a9e';
+  }
+
+  // Fetch GitHub profile + repos in parallel
+  let ghProfile = null, ghRepos = [], totalStars = 0;
+  try {
+    const [profRes, repoRes] = await Promise.all([
+      fetch(`https://api.github.com/users/${user}`),
+      fetch(`https://api.github.com/users/${user}/repos?sort=updated&per_page=30`)
+    ]);
+    if (profRes.ok) ghProfile = await profRes.json();
+    if (repoRes.ok) {
+      ghRepos = await repoRes.json();
+      totalStars = ghRepos.reduce((s, r) => s + (r.stargazers_count || 0), 0);
+    }
+  } catch(e) {}
+
+  // Populate profile banner
+  if (ghProfile) {
+    const avatar = document.getElementById('gh-avatar');
+    const fallback = document.getElementById('gh-avatar-fallback');
+    if (ghProfile.avatar_url) {
+      avatar.src = ghProfile.avatar_url;
+      avatar.style.display = 'block';
+    } else {
+      avatar.style.display = 'none';
+      fallback.style.display = 'flex';
+    }
+    document.getElementById('gh-profile-name').textContent = ghProfile.name || ghProfile.login;
+    document.getElementById('gh-repos').textContent = ghProfile.public_repos || '—';
+    document.getElementById('gh-stars').textContent = totalStars || '—';
+    document.getElementById('gh-followers').textContent = ghProfile.followers || '—';
+    document.getElementById('gh-following').textContent = ghProfile.following || '—';
+  }
+
+  // Merge live stats if repos found
+  ghRepos.forEach(repo => {
+    const match = projects.find(p => p.name === repo.name);
+    if (match) {
+      match.stars = repo.stargazers_count;
+      match.forks = repo.forks_count;
+      match.desc = repo.description || match.desc;
+    } else if (repo.name && !repo.fork && repo.description) {
+      projects.push({
+        repo: repo,
+        name: repo.name,
+        desc: repo.description,
+        lang: repo.language || 'Shell',
+        langColor: langColor(repo.language),
+        tags: repo.topics || [],
+        stars: repo.stargazers_count,
+        forks: repo.forks_count,
+        updated: repo.updated_at ? new Date(repo.updated_at).toLocaleDateString('en-US',{month:'short',year:'numeric'}) : '',
+        type: 'public'
+      });
+    }
+  });
+
+  const repoIcon = `<svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" style="opacity:.6"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8Z"/></svg>`;
+
+  grid.innerHTML = projects.slice(0,6).map(p => `
+    <a class="gh-card reveal" href="https://github.com/${user}/${p.name}" target="_blank" rel="noopener">
+      <div class="gh-card-head">
+        <span class="gh-card-name">${repoIcon} ${p.name}</span>
+        <span class="gh-card-lang">${p.lang}</span>
+      </div>
+      <div class="gh-card-desc">${p.desc}</div>
+      ${p.tags.length ? `<div class="gh-card-tags">${p.tags.slice(0,4).map(t=>`<span class="gh-card-tag">${t}</span>`).join('')}</div>` : ''}
+      <div class="gh-card-stats">
+        <div class="gh-stat"><div class="gh-lang-dot" style="background:${langColor(p.lang)}"></div>${p.lang}</div>
+        <div class="gh-stat">★ ${p.stars}</div>
+        <div class="gh-stat">⑂ ${p.forks}</div>
+        ${p.type==='work' ? '<div class="gh-stat" style="margin-left:auto;color:var(--amber);font-size:10px">● production</div>' : p.updated ? `<div class="gh-stat" style="margin-left:auto;font-size:10px">Updated ${p.updated}</div>` : ''}
+      </div>
+    </a>
+  `).join('');
+
+  // Re-observe new cards for reveal animation
+  grid.querySelectorAll('.reveal').forEach((el,i) => {
+    el.dataset.d = i * 80;
+    io.observe(el);
+  });
+})();
+
+// ═══════════════════════════════════════
+// ARCHITECTURE DIAGRAM
+// ═══════════════════════════════════════
+const ARCH_VIEWS = {
+  kafka: {
+    nodes: [
+      {id:'producer', x:80, y:220, w:130, h:56, color:'#f59e0b', icon:'📦', label:'Producer Services', sub:'Order / Billing MS', type:'service'},
+      {id:'kafka',    x:280, y:200, w:130, h:96, color:'#00ff88', icon:'⚡', label:'Apache Kafka', sub:'3 Brokers · 3 Replicas', type:'infra'},
+      {id:'consumer', x:480, y:160, w:130, h:56, color:'#00ff88', icon:'⚙️', label:'Consumer Group', sub:'Transaction Layer', type:'service'},
+      {id:'dlq',      x:480, y:280, w:130, h:56, color:'#a78bfa', icon:'📪', label:'Dead Letter Queue', sub:'Retry / Reprocess', type:'storage'},
+      {id:'redis',    x:680, y:160, w:120, h:56, color:'#a78bfa', icon:'🔴', label:'Redis Cache', sub:'Response ≤60ms', type:'storage'},
+      {id:'pg',       x:680, y:280, w:120, h:56, color:'#a78bfa', icon:'🐘', label:'PostgreSQL', sub:'Persistent Store', type:'storage'},
+      {id:'prom',     x:480, y:400, w:130, h:56, color:'#00d4ff', icon:'📊', label:'Prometheus', sub:'Metrics + Alerts', type:'infra'},
+      {id:'grafana',  x:680, y:400, w:120, h:56, color:'#00d4ff', icon:'📈', label:'Grafana', sub:'Dashboards', type:'infra'},
+    ],
+    edges: [
+      {from:'producer',to:'kafka', label:'publish', animated:true},
+      {from:'kafka',to:'consumer', label:'consume', animated:true},
+      {from:'kafka',to:'dlq',      label:'failed msg', animated:false},
+      {from:'dlq',to:'kafka',      label:'retry', animated:false},
+      {from:'consumer',to:'redis', label:'cache', animated:false},
+      {from:'consumer',to:'pg',    label:'persist', animated:false},
+      {from:'consumer',to:'prom',  label:'metrics', animated:false},
+      {from:'prom',to:'grafana',   label:'visualize', animated:false},
+    ]
+  },
+  cicd: {
+    nodes: [
+      {id:'dev',      x:60,  y:220, w:110, h:56, color:'#f59e0b', icon:'💻', label:'Developer', sub:'git push', type:'external'},
+      {id:'github',   x:230, y:220, w:120, h:56, color:'#f59e0b', icon:'⑂',  label:'GitHub', sub:'PR + Actions', type:'external'},
+      {id:'jenkins',  x:410, y:140, w:120, h:56, color:'#00d4ff', icon:'🔧', label:'Jenkins', sub:'Build + Test', type:'infra'},
+      {id:'sonar',    x:410, y:250, w:120, h:56, color:'#00d4ff', icon:'🔍', label:'SonarQube', sub:'Code Quality', type:'infra'},
+      {id:'trivy',    x:410, y:360, w:120, h:56, color:'#00d4ff', icon:'🔒', label:'Trivy', sub:'Security Scan', type:'infra'},
+      {id:'jfrog',    x:590, y:220, w:120, h:56, color:'#a78bfa', icon:'📦', label:'JFrog', sub:'Artifact Registry', type:'storage'},
+      {id:'argocd',   x:770, y:220, w:120, h:56, color:'#00ff88', icon:'🔄', label:'ArgoCD', sub:'GitOps Deploy', type:'service'},
+      {id:'k8s',      x:770, y:360, w:120, h:56, color:'#00ff88', icon:'☸️', label:'Kubernetes', sub:'AWS EKS / GCP', type:'service'},
+    ],
+    edges: [
+      {from:'dev',to:'github',    label:'push', animated:true},
+      {from:'github',to:'jenkins',label:'trigger', animated:true},
+      {from:'jenkins',to:'sonar', label:'analyse', animated:false},
+      {from:'jenkins',to:'trivy', label:'scan', animated:false},
+      {from:'jenkins',to:'jfrog', label:'publish', animated:true},
+      {from:'jfrog',to:'argocd',  label:'sync', animated:true},
+      {from:'argocd',to:'k8s',    label:'deploy', animated:true},
+    ]
+  },
+  cloud: {
+    nodes: [
+      {id:'client',  x:60,  y:220, w:110, h:56, color:'#f59e0b', icon:'🌐', label:'Client Apps', sub:'Telecom Systems', type:'external'},
+      {id:'alb',     x:230, y:220, w:120, h:56, color:'#00d4ff', icon:'⚖️', label:'ALB / Ingress', sub:'Load Balancer', type:'infra'},
+      {id:'eks',     x:420, y:140, w:130, h:56, color:'#00ff88', icon:'☸️', label:'AWS EKS', sub:'22 Microservices', type:'service'},
+      {id:'gke',     x:420, y:300, w:130, h:56, color:'#00ff88', icon:'☸️', label:'GCP GKE', sub:'Workload Mirror', type:'service'},
+      {id:'s3',      x:620, y:100, w:110, h:56, color:'#a78bfa', icon:'🪣', label:'AWS S3', sub:'Object Storage', type:'storage'},
+      {id:'rds',     x:620, y:220, w:110, h:56, color:'#a78bfa', icon:'🐘', label:'RDS Aurora', sub:'PostgreSQL HA', type:'storage'},
+      {id:'redis2',  x:620, y:340, w:110, h:56, color:'#a78bfa', icon:'🔴', label:'ElastiCache', sub:'Redis Cluster', type:'storage'},
+      {id:'tf',      x:420, y:430, w:130, h:56, color:'#00d4ff', icon:'🏗️', label:'Terraform + Helm', sub:'IaC Provisioning', type:'infra'},
+    ],
+    edges: [
+      {from:'client',to:'alb',   label:'HTTPS', animated:true},
+      {from:'alb',to:'eks',      label:'route', animated:true},
+      {from:'alb',to:'gke',      label:'failover', animated:false},
+      {from:'eks',to:'s3',       label:'store', animated:false},
+      {from:'eks',to:'rds',      label:'query', animated:false},
+      {from:'eks',to:'redis2',   label:'cache', animated:false},
+      {from:'gke',to:'rds',      label:'query', animated:false},
+      {from:'tf',to:'eks',       label:'provision', animated:false},
+      {from:'tf',to:'gke',       label:'provision', animated:false},
+    ]
+  }
+};
+
+let currentArch = 'kafka';
+
+function setArch(view) {
+  currentArch = view;
+  document.querySelectorAll('.arch-btn').forEach(b => {
+    b.classList.toggle('arch-active', b.textContent.toLowerCase().includes(
+      view === 'kafka' ? 'kafka' : view === 'cicd' ? 'ci' : 'cloud'
+    ));
+  });
+  renderArch(view);
+}
+
+function nodeCenter(n) {
+  return { x: n.x + n.w/2, y: n.y + n.h/2 };
+}
+
+function renderArch(view) {
+  const data = ARCH_VIEWS[view];
+  const svg = document.getElementById('arch-svg');
+  const tip = document.getElementById('arch-tip');
+  const nodeMap = {};
+  data.nodes.forEach(n => nodeMap[n.id] = n);
+
+  let svgH = 520;
+  // Calculate required height
+  const maxY = Math.max(...data.nodes.map(n => n.y + n.h)) + 60;
+  svgH = Math.max(520, maxY);
+
+  svg.setAttribute('viewBox', `0 0 960 ${svgH}`);
+  svg.setAttribute('height', svgH);
+  document.querySelector('.arch-canvas').style.height = svgH + 'px';
+
+  // Color map
+  const typeColor = { service:'#00ff88', infra:'#00d4ff', external:'#f59e0b', storage:'#a78bfa' };
+
+  let out = `<defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3d5166"/>
+    </marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>`;
+
+  // Edges
+  data.edges.forEach(e => {
+    const a = nodeMap[e.from], b = nodeMap[e.to];
+    if (!a || !b) return;
+    const ac = nodeCenter(a), bc = nodeCenter(b);
+    const mx = (ac.x + bc.x)/2, my = (ac.y + bc.y)/2;
+    const dashProps = e.animated
+      ? 'stroke-dasharray="8 4" style="animation:dash 1.2s linear infinite"'
+      : 'stroke-dasharray="4 3"';
+    out += `<path d="M${ac.x},${ac.y} Q${mx},${ac.y} ${bc.x},${bc.y}"
+      fill="none" stroke="#1e2d3d" stroke-width="1.5" ${dashProps} marker-end="url(#arr)"/>
+      <text x="${mx}" y="${my - 6}" text-anchor="middle" font-family="JetBrains Mono,monospace"
+        font-size="9" fill="#3d5166">${e.label}</text>`;
+  });
+
+  // Nodes
+  data.nodes.forEach(n => {
+    const col = typeColor[n.type] || '#00ff88';
+    const fillOpacity = 0.06;
+    out += `<g class="arch-node" data-id="${n.id}" transform="translate(${n.x},${n.y})">
+      <rect width="${n.w}" height="${n.h}" rx="8" fill="${col}" fill-opacity="${fillOpacity}"
+        stroke="${col}" stroke-opacity="0.35" stroke-width="1" class="node-box"/>
+      <text x="10" y="20" font-family="JetBrains Mono,monospace" font-size="13" fill="${col}" font-weight="700">${n.icon}</text>
+      <text x="28" y="21" font-family="JetBrains Mono,monospace" font-size="11" fill="#cdd9e5" font-weight="600">${n.label}</text>
+      <text x="28" y="35" font-family="JetBrains Mono,monospace" font-size="9" fill="#768a9e">${n.sub}</text>
+    </g>`;
+  });
+
+  svg.innerHTML = out;
+
+  // Tooltip
+  svg.querySelectorAll('.arch-node').forEach(el => {
+    const id = el.dataset.id;
+    const n = nodeMap[id];
+    const tooltips = {
+      producer:'Produces order/billing events to Kafka topics.<br><b>Tech:</b> Spring Boot, REST API',
+      kafka:'Central message broker.<br><b>Config:</b> 3 brokers, replication=3, retention=7d',
+      consumer:'Consumes Kafka events for transaction processing.<br><b>Throughput:</b> 500K msg/day',
+      dlq:'Captures failed messages.<br><b>Strategy:</b> Exponential backoff + manual reprocessing',
+      redis:'In-memory cache layer.<br><b>Impact:</b> Response time ↓60%',
+      pg:'Primary persistent store.<br><b>Config:</b> Connection pooling, indexed queries',
+      prom:'Scrapes metrics from all services.<br><b>Alerts:</b> Latency, error-rate, lag',
+      grafana:'Dashboards for SLA, throughput, and infra health',
+      dev:'Developer pushes code via feature branch with PR.',
+      github:'Hosts source; triggers Actions on PR merge.',
+      jenkins:'Runs build, unit tests, integration tests in parallel.',
+      sonar:'Enforces 85%+ coverage, zero critical code smells.',
+      trivy:'Scans Docker images for CVEs before registry push.',
+      jfrog:'Versioned artifact storage with promotion gates.',
+      argocd:'Syncs Git state to cluster. Supports automated rollback.',
+      k8s:'Production cluster on AWS EKS with HPA & PDB.',
+      client:'External telecom billing systems and order APIs.',
+      alb:'AWS ALB with path-based routing and SSL termination.',
+      eks:'Primary production cluster running 22 microservices.',
+      gke:'GCP failover cluster for HA across cloud providers.',
+      s3:'Object storage for reports, exports, and backups.',
+      rds:'Aurora PostgreSQL with multi-AZ, read replicas.',
+      redis2:'Redis Cluster via ElastiCache. TTL-managed caching.',
+      tf:'Terraform modules + Helm charts. Full IaC. 70% faster provisioning.'
+    };
+    el.addEventListener('mouseenter', ev => {
+      const rect = document.getElementById('arch-canvas').getBoundingClientRect();
+      const nRect = el.getBoundingClientRect();
+      const x = nRect.left - rect.left + n.w/2;
+      const y = nRect.top - rect.top - 10;
+      tip.style.opacity = '1';
+      tip.style.left = Math.min(x, rect.width - 250) + 'px';
+      tip.style.top = (y - 80) + 'px';
+      tip.innerHTML = `<div class="arch-tooltip-title">${n.icon} ${n.label}</div>
+        <div class="arch-tooltip-row">${tooltips[id] || ''}</div>`;
+    });
+    el.addEventListener('mouseleave', () => { tip.style.opacity = '0'; });
+  });
+}
+
+// Init diagram
+renderArch('kafka');
+
 </script>
 </body>
 </html>
